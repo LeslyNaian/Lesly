@@ -3,52 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Efecto Código Cayendo</title>
+    <title>100 Razones por las que te amo</title>
+    <link rel="stylesheet" href="style1.css">
     <style>
-        body {
-            background-color: black;
-            color: pink;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
+        .container {
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden; /* Evita superposición */
+            padding: 10px;
         }
-        .word {
-            position: absolute;
-            font-size: 24px;
-            font-weight: bold;
-            animation: fall 5s linear infinite;
+
+        .reason {
+            font-size: 18px;
+            line-height: 1.5;
+            word-spacing: 2px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.7s ease-in-out forwards;
         }
-        @keyframes fall {
-            0% {
-                transform: translateY(-100%);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh);
+
+        @keyframes fadeInUp {
+            from {
                 opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="reasons"></div>
+    </div>
+
     <script>
-        function createFallingWords() {
-            for (let i = 0; i < 20; i++) { // Número de palabras generadas
-                let word = document.createElement("div");
-                word.className = "word";
-                word.innerText = "Te amo"; 
-                word.style.left = Math.random() * window.innerWidth + "px"; // Posición aleatoria en la pantalla
-                word.style.animationDuration = (Math.random() * 3 + 2) + "s"; // Variar la duración
-                document.body.appendChild(word);
+        const reasons = [
+            "100 Razones por las que te amo",
+            "1._Siempre me haces sonreír",
+            "2._Tu forma de ver el mundo es única",
+            "3._Me apoyas en todo momento",
+            "4._Tienes el corazón más hermoso",
+            "5._Tu risa ilumina mi día",
+            "6._Amo tus abrazos",
+            "7._Eres mi refugio",
+            "8._Me entiendes sin necesidad de palabras",
+            "9._Tienes una forma única de ver el mundo.",
+            "10._Me haces reír incluso en los peores días",
+            "11._Eres paciente conmigo",
+            "12._Tus palabras me dan fuerza",
+            "13._Me motivas a alcanzar mis sueños",
+            "14._Me haces sentir segura",
+            "15._Tus ojos reflejan sinceridad",
+            "16._Siempre tienes tiempo para mí",
+            "17._Comparto mis pensamientos contigo",
+            "18._Disfrutamos juntos hasta las pequeñas cosas",
+            "19._Te respeto y te valoro",
+            "20._Haces que cada día sea especial",
+            "21._Me escuchas con atención",
+            "22._Me ayudas a superar mis miedos",
+            "23._Tu voz es música para mis oídos",
+            "24._Nunca me juzgas",
+            "25._Haces lo imposible por verme feliz",
+            "26._Me cuidas sin que te lo pida",
+            "27._Me das tu confianza",
+            "28._Sabes cómo animarme cuando estoy triste",
+            "29._Me haces sentir amada sin condiciones",
+            "30._Me dejas ser yo misma"
+        ];
 
-                word.addEventListener("animationend", () => {
-                    word.remove(); // Elimina el elemento después de la animación
-                });
-            }
-        }
+        const container = document.querySelector('.reasons');
 
-        setInterval(createFallingWords, 1000); // Genera palabras cada segundo
+        reasons.forEach((reason, index) => {
+            let div = document.createElement('div');
+            div.classList.add('reason');
+            div.style.animationDelay = `${index * 0.3}s`; // Fluidez mejorada
+            div.innerText = reason;
+            container.appendChild(div);
+        });
     </script>
 </body>
 </html>
