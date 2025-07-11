@@ -1,159 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100 Razones por las que te amo</title>
-    <link rel="stylesheet" href="style1.css">
-    <style>
-        .container {
-            max-width: 600px;
-            margin: auto;
-            overflow: hidden; 
-            padding: 10px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mary Kay - Belleza que Empodera</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://pimg.us.marykaycdn.com/HeroZoom/10000/990311880.jpg') no-repeat center center fixed;
+      background-size: cover;
+      animation: moverFondo 10s infinite alternate ease-in-out;
+      color: #fff;
+      text-align: center;
+    }
 
-        .reason {
-            font-size: 18px;
-            line-height: 1.5;
-            word-spacing: 2px;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.7s ease-in-out forwards;
-        }
+    @keyframes moverFondo {
+      0% { background-position: center center; }
+      100% { background-position: center 10px; }
+    }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    .header {
+      background-color: #d63384;
+      padding: 20px;
+      position: relative;
+    }
+
+    .header h1 {
+      margin: 0;
+      color: white;
+      font-size: 2em;
+    }
+
+    .nav {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 16px;
+    }
+
+    .nav a, .back-button {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 18px;
+      transition: color 0.3s;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .nav a:hover, .back-button:hover {
+      color: #ffe6f0;
+    }
+
+    .kodfun-galeri {
+      display: flex;
+      height: 20rem;
+      gap: 1rem;
+    }
+
+    .kodfun-galeri > div {
+      flex: 1;
+      border-radius: 1rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: flex 0.8s cubic-bezier(.25, .4, .45, 1.4);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      padding-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .kodfun-galeri > div:hover {
+      flex: 5;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      width: 80%;
+      transition: transform 0.3s;
+      color: #333;
+    }
+
+    .product:hover {
+      transform: scale(1.02);
+    }
+
+    .product img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+      margin-right: 20px;
+      display: block;
+    }
+
+    .product-info h3 {
+      color: #d63384;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="reasons"></div>
+
+  <div class="header">
+    <br><br>
+    <h1>Mary Kay - Belleza que Empodera</h1>
+    <div class="nav">
+      <button onclick="history.back()" class="back-button">⬅</button>
+      <a href="contacto.html">Contacto</a> 
+      <a href="testimonios.html">Testimonios</a>  
+      <a href="ayuda.html">Ayuda</a>
     </div>
+  </div>
+  <br>
+  <div class="kodfun-galeri">
+    <div style="background-image: url('https://pimg.us.marykaycdn.com/HeroZoom/10000/990311880.jpg');">Cuidado Facial</div>
+    <div style="background-image: url('https://pimg.us.marykaycdn.com/HeroZoom/10003/mary-kay-illuminea-extrait-de-parfum.jpg');">Fragancias</div>
+    <div style="background-image: url('https://pimg.us.marykaycdn.com/HeroZoom/10000/533512-UNL-GB-fearlessly-live-Bottle-Z2.jpg');">Empoderamiento</div>
+    <div style="background-image: url('https://pimg.us.marykaycdn.com/HeroZoom/10005/J2009225-UNL-GB-ThinkingOfYou.jpg');">Rutinas</div>
+  </div>
 
-    <script>
-        const reasons = [
-            "100 Razones por las que te amo",
-            "1._Siempre me haces sonreír",
-            "2._Tu forma de ver el mundo es única",
-            "3._Me apoyas en todo momento",
-            "4._Tienes el corazón más hermoso",
-            "5._Tu risa ilumina mi día",
-            "6._Amo tus abrazos",
-            "7._Eres mi refugio",
-            "8._Me entiendes sin necesidad de palabras",
-            "9._Tienes una forma única de ver el mundo.",
-            "10._Me haces reír incluso en los peores días",
-            "11._Eres paciente conmigo",
-            "12._Tus palabras me dan fuerza",
-            "13._Me motivas a alcanzar mis sueños",
-            "14._Me haces sentir segura",
-            "15._Tus ojos reflejan sinceridad",
-            "16._Siempre tienes tiempo para mí",
-            "17._Comparto mis pensamientos contigo",
-            "18._Disfrutamos juntos hasta las pequeñas cosas",
-            "19._Te respeto y te valoro",
-            "20._Haces que cada día sea especial",
-            "21._Me escuchas con atención",
-            "22._Me ayudas a superar mis miedos",
-            "23._Tu voz es música para mis oídos",
-            "24._Nunca me juzgas",
-            "25._Haces lo imposible por verme feliz",
-            "26._Me cuidas sin que te lo pida",
-            "27._Me das tu confianza",
-            "28._Sabes cómo animarme cuando estoy triste",
-            "29._Me haces sentir amada sin condiciones",
-            "30._Me dejas ser yo misma",
-"31._Tienes una hermosa energía", 
-"32._Estar contigo es lo mejor",  
-"33._Me enseñas cosas nuevas",
-"34._Me sorprendes con detalles inesperados", 
-"35._Me inspiras confianza", 
-"36._Amo tus abrazos", 
-"37._Te preocupas por mi bienestar",
-"38._Me apoyas en mis sueños", 
-"39._Contigo, todo parece más fácil",
-"40._Amo cada parte de ti",
-"41._Amo tus besos",
-"42._Me haces sentir afortunada",  
-"43._Haces que los problemas parezcan pequeños",  
-"44._Nunca me abandonas",
-"45._Me haces sentir importante",
-"46._Me amas",
-"47._Me das tu amor sin pedir nada a cambio", 
-"48._Tienes la capacidad de hacerte sentir única",   
-"49._Tus acciones hablan más que tus palabras", 
-"50._Respetas mis tiempos y espacios", 
-"51._Me animas en mis proyectos",  
-"52._Haces que todo sea más especial", 
-"53._Me recuerdas lo valiosa que soy", 
-"54._Tu amor es sincero y puro", 
-"55._Eres mi mejor amigo",
-"56._Me ayudas a crecer como persona",
-"57._Eres honesto conmigo", 
-"58._Me protejes de todo lo malo",
-"59._Tu amor es constante", 
-"60._Siempre encuentras formas de sorprenderme", 
-"61._Sabes lo que necesito antes de que lo diga",
-"62._Me haces sentir viva",  
-"63._Tienes una forma única de demostrar amor",    
-"64._Siempre me das fuerzas para seguir adelante",
-"65._Cada día es un regalo contigo",
-"66._Comparto contigo mis sueños",
-"67._Te esfuerzas por verme sonreír",
-"68._Me acompañas en los momentos difíciles",
-"69._Aprecio cada detalle tuyo",
-"70._Nunca dejo de amarte",  
-"71._Eres mi compañero perfecto",
-"72._Siempre estas aquí para apoyarme", 
-"73._Mi amor por ti es incondicional", 
-"74._Sabes cómo hacerme sentir especial", 
-"75._Contigo, el mundo parece mejor",
-"76._Nunca dejas de sorprenderme",  
-"77._Me comprometo contigo",
-"78._Eres leal y fiel",
-"79._Haces de los días comunes momentos especiales", 
-"80._Me entrego completamente a ti", 
-"81._Siempre tienes palabras dulces para mi",
-"82._Haces que mi corazón lata más fuerte",
-"83._Sabes cómo cuidarme",  
-"84._No necesito razones para amarte", 
-"85._Eres mi hogar",  
-"86._Amo tus ojos",
-"87._Siempre encuentras formas de estar conmigo", 
-"88._Nunca me dejas sola",  
-"89._Te doy lo mejor de mí",  
-"90._Mi amor es eterno", 
-"91._Te haces sentir que todo vale la pena",
-"92._No imagino mi vida sin tí",  
-"93._Sabes lo que me gusta y lo recuerdas", 
-"94._Contigo, cada día es más bonito",
-"95._Me haces sentir completa",  
-"96._Amo tu sonrisa",  
-"97._Tu amor es mi mayor tesoro",
-    "98._Amo tus abrazos",
-    "99._Gracias por estar conmigo",
-    "100._TE AMO"
-        ];
+  <div class="container">
+    <br>
+    <div class="product-list">
+      <a href="producto1.html">
+        <div class="product">
+          <img src="https://pimg.us.marykaycdn.com/HeroZoom/10000/990311880.jpg" alt="TimeWise">
+          <div class="product-info">
+            <h3>TimeWise® Volu-Firm®</h3>
+            <p>Tratamiento antiedad avanzado para una piel más firme y luminosa.</p>
+          </div>
+        </div>
+      </a>
+      <a href="producto2.html">
+        <div class="product">
+          <img src="https://pimg.us.marykaycdn.com/HeroZoom/10003/mary-kay-illuminea-extrait-de-parfum.jpg" alt="Illuminea">
+          <div class="product-info">
+            <h3>Illuminea™ Extrait de Parfum</h3>
+            <p>Una fragancia sofisticada que refleja tu poder interior.</p>
+          </div>
+        </div>
+      </a>
+      <a href="producto3.html">
+        <div class="product">
+          <img src="https://pimg.us.marykaycdn.com/HeroZoom/10000/533512-UNL-GB-fearlessly-live-Bottle-Z2.jpg" alt="Live Fearlessly">
+          <div class="product-info">
+            <h3>Live Fearlessly Eau de Parfum</h3>
+            <p>Inspiración para vivir con pasión y sin miedo.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
 
-        const container = document.querySelector('.reasons');
-
-        reasons.forEach((reason, index) => {
-            let div = document.createElement('div');
-            div.classList.add('reason');
-            div.style.animationDelay = `${index * 0.3}s`; // Fluidez mejorada
-            div.innerText = reason;
-            container.appendChild(div);
-        });
-    </script>
 </body>
-</html>h0
+</html>
