@@ -40,7 +40,8 @@
       font-size: 16px;
     }
 
-    .nav a, .back-button {
+    .nav a,
+    .back-button {
       color: white;
       text-decoration: none;
       margin: 0 10px;
@@ -51,7 +52,8 @@
       cursor: pointer;
     }
 
-    .nav a:hover, .back-button:hover {
+    .nav a:hover,
+    .back-button:hover {
       color: #ffe6f0;
     }
 
@@ -115,6 +117,7 @@
 
     .product-info h3 {
       color: #d63384;
+      margin: 0 0 5px;
     }
   </style>
 </head>
@@ -122,54 +125,74 @@
 
   <div class="header">
     <br><br>
-    <h1>Mary Kay - Belleza que Empodera</h1>
+    <h1>Mary Kay – Belleza que Empodera</h1>
     <div class="nav">
       <button onclick="history.back()" class="back-button">⬅</button>
-      <a href="contacto.html">Contacto</a> 
-      <a href="testimonios.html">Testimonios</a>  
+      <a href="contacto.html">Contacto</a>
+      <a href="testimonios.html">Testimonios</a>
       <a href="ayuda.html">Ayuda</a>
     </div>
   </div>
   <br>
+
+  <!-- Galería de categorías -->
   <div class="kodfun-galeri">
-    <div style="background-image: url('https://pimg.us.marykaycdn.com/HeroZoom/10000/990311880.jpg');">Cuidado Facial</div>
-    <div style="background-image: url('https://pimg.us.marykaycdn.com/HeroZoom/10003/mary-kay-illuminea-extrait-de-parfum.jpg');">Fragancias</div>
-    <div style="background-image: url('https://pimg.us.marykaycdn.com/HeroZoom/10000/533512-UNL-GB-fearlessly-live-Bottle-Z2.jpg');">Empoderamiento</div>
-    <div style="background-image: url('https://pimg.us.marykaycdn.com/HeroZoom/10005/J2009225-UNL-GB-ThinkingOfYou.jpg');">Rutinas</div>
+    <div style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/61gZVZxZKzL._AC_SL1000_.jpg');">
+      Cuidado Facial
+    </div>
+    <div style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/41oZQZQZKzL._AC_.jpg');">
+      Maquillaje
+    </div>
+    <div style="background-image: url('https://pimg.us.marykaycdn.com/HeroZoom/10003/mary-kay-illuminea-extrait-de-parfum.jpg');">
+      Fragancias
+    </div>
+    <div style="background-image: url('https://pimg.us.marykaycdn.com/HeroZoom/10000/990311880.jpg');">
+      Rutinas
+    </div>
   </div>
 
   <div class="container">
-    <br>
+    <!-- Lista de productos destacados -->
     <div class="product-list">
-      <a href="producto1.html">
+
+      <!-- Producto 1: Cuidado Facial -->
+      <a href="producto-facial.html">
         <div class="product">
-          <img src="https://pimg.us.marykaycdn.com/HeroZoom/10000/990311880.jpg" alt="TimeWise">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/61gZVZxZKzL._AC_SL1000_.jpg"
+               alt="TimeWise® Volu-Firm®">
           <div class="product-info">
             <h3>TimeWise® Volu-Firm®</h3>
-            <p>Tratamiento antiedad avanzado para una piel más firme y luminosa.</p>
+            <p>Tratamiento antiedad avanzado para piel más firme y luminosa.</p>
           </div>
         </div>
       </a>
-      <a href="producto2.html">
+
+      <!-- Producto 2: Base Maquillaje -->
+      <a href="producto-maquillaje.html">
         <div class="product">
-          <img src="https://pimg.us.marykaycdn.com/HeroZoom/10003/mary-kay-illuminea-extrait-de-parfum.jpg" alt="Illuminea">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41oZQZQZKzL._AC_.jpg"
+               alt="Base TimeWise Matte-Wear">
+          <div class="product-info">
+            <h3>Base TimeWise® Matte-Wear</h3>
+            <p>Cobertura perfecta con acabado mate y libre de brillos.</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Producto 3: Fragancia -->
+      <a href="producto-fragancias.html">
+        <div class="product">
+          <img src="https://pimg.us.marykaycdn.com/HeroZoom/10003/mary-kay-illuminea-extrait-de-parfum.jpg"
+               alt="Illuminea™ Extrait de Parfum">
           <div class="product-info">
             <h3>Illuminea™ Extrait de Parfum</h3>
-            <p>Una fragancia sofisticada que refleja tu poder interior.</p>
+            <p>Fragancia sofisticada que refleja tu poder interior.</p>
           </div>
         </div>
       </a>
-      <a href="producto3.html">
-        <div class="product">
-          <img src="https://pimg.us.marykaycdn.com/HeroZoom/10000/533512-UNL-GB-fearlessly-live-Bottle-Z2.jpg" alt="Live Fearlessly">
-          <div class="product-info">
-            <h3>Live Fearlessly Eau de Parfum</h3>
-            <p>Inspiración para vivir con pasión y sin miedo.</p>
-          </div>
-        </div>
-      </a>
+
     </div>
   </div>
 
 </body>
-</html>
+  </html>
